@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏投票系统</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 游戏投票系统</h1>
+            <p>基于等级排名的权重投票系统</p>
+            <!-- 将管理员按钮移到右上角 -->
+            <div class="admin-toggle">
+                <button class="btn btn-admin" onclick="toggleAdminPanel()">
+                    管理员面板
+                </button>
+            </div>
+        </div>
+        
+        <div id="adminPanel" class="admin-panel hidden">
+            <div style="display: flex; justify-content: space-between; align-items: center;">
+                <h2>管理员面板</h2>
+                <button class="btn" onclick="logoutAdmin()">退出管理员</button>
+            </div>
+            
+            <div class="admin-section">
+                <h3>上传玩家数据</h3>
+                <div class="file-upload" onclick="document.getElementById('playerFile').click()">
+                    <p>点击上传玩家数据JSON文件</p>
+                    <p style="font-size: 12px; color: #666;">文件应包含account和level字段的玩家列表</p>
+                </div>
+                <input type="file" id="playerFile" accept=".json" style="display: none" onchange="handlePlayerFileUpload(this.files[0])">
+                <div id="playerUploadStatus"></div>
+            </div>
+            
+            <div class="admin-section">
+                <h3>创建新投票</h3>
+                <div class="vote-form">
+                    <input type="text" id="voteTopic" placeholder="投票主题">
+                    <textarea id="voteDescription" placeholder="投票描述" rows="3"></textarea>
+                    <select id="voteType">
+                        <option value="single">单选投票</option>
+                        <option value="multiple">多选投票</option>
+                    </select>
+                    <div id="optionInputs">
+                        <div class="option-input-group">
+                            <input type="text" placeholder="选项1">
+                            <button type="button" class="btn" onclick="removeOption(this)">删除</button>
+                        </div>
+                        <div class="option-input-group">
+                            <input type="text" placeholder="选项2">
+                            <button type="button" class="btn" onclick="removeOption(this)">删除</button>
+                        </div>
+                    </div>
+                    <button type="button" class="btn" onclick="addOption()">添加选项</button>
+                    <button type="button" class="btn" onclick="createVote()">创建投票</button>
+                </div>
+            </div>
+            
+            <div class="admin-section">
+                <h3>当前投票管理</h3>
+                <div id="adminVotesList"></div>
+            </div>
+        </div>
+        
+        <div class="player-info">
+            <h2>玩家登录</h2>
+            <div class="login-form">
+                <div class="form-group">
+                    <label for="playerAccount"></label>
+                    <input type="text" id="playerAccount" placeholder="请输入您的游戏账号">
+                </div>
+                
+                <button class="btn" onclick="loginPlayer()">登录</button>
+            </div>
+            <div id="playerStatus" class="hidden"></div>
+        </div>
+        
+        <div id="votingArea" class="hidden">
+            <h2 style="color: white; margin-bottom: 20px;">进行中的投票</h2>
+            <div id="votingSection" class="voting-section"></div>
+        </div>
+        
+        <div id="resultsArea" class="results-section hidden">
+            <h2 class="results-title">投票结果</h2>
+            <div id="resultsContainer"></div>
+        </div>
+        
+        <div id="loading" class="loading">
+            <p>加载中...</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
