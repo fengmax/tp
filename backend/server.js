@@ -75,43 +75,43 @@ app.post('/api/login', (req, res) => {
     }
     
     const players = readPlayers();
-    const player = players.find(p => p.account === playerAccount );
+    const player = players.find(p => p.account === playerAccount);
     
     if (!player) {
         return res.status(401).json({ success: false, message: '账号错误' });
     }
     
     // 计算排名和权重
-const sortedPlayers = [...players].sort((a, b) => b.level - a.level);
-const playerRank = sortedPlayers.findIndex(p => p.account === playerAccount) + 1;
+    const sortedPlayers = [...players].sort((a, b) => b.level - a.level);
+    const playerRank = sortedPlayers.findIndex(p => p.account === playerAccount) + 1;
 
-// 获取前3名玩家
-const top3Players = sortedPlayers.slice(0, 3);
+    // 获取前3名玩家
+    const top3Players = sortedPlayers.slice(0, 3);
 
-// 检查前3名是否等级相同
-const top3Levels = top3Players.map(player => player.level);
-const allTop3SameLevel = top3Levels.length >= 3 && top3Levels.every(level => level === top3Levels[0]);
+    // 检查前3名是否等级相同
+    const top3Levels = top3Players.map(player => player.level);
+    const allTop3SameLevel = top3Levels.length >= 3 && top3Levels.every(level => level === top3Levels[0]);
 
-// 计算权重
-let weight;
-if (allTop3SameLevel) {
-    // 情况1：前3名等级相同，所有玩家权重1
-    weight = 1;
-} else {
-    // 情况2：前3名等级不同，前两名权重2，其他权重1
-    weight = playerRank <= 2 ? 2 : 1;
-}
-
-res.json({
-    success: true,
-    player: {
-        account: player.account,
-        level: player.level,
-        rank: playerRank,
-        weight: weight
+    // 计算权重
+    let weight;
+    if (allTop3SameLevel) {
+        // 情况1：前3名等级相同，所有玩家权重1
+        weight = 1;
+    } else {
+        // 情况2：前3名等级不同，前两名权重2，其他权重1
+        weight = playerRank <= 2 ? 2 : 1;
     }
-});
 
+    res.json({
+        success: true,
+        player: {
+            account: player.account,
+            level: player.level,
+            rank: playerRank,
+            weight: weight
+        }
+    });
+}); // 这里缺少了这个结束括号
 
 // 管理员登录
 app.post('/api/admin/login', (req, res) => {
@@ -267,7 +267,7 @@ app.post('/api/votes/vote', (req, res) => {
     res.json({ success: true, message: '投票成功', weight });
 });
 
-// 删除投票 - 最终修复版本
+// 删除投票
 app.delete('/api/votes/:voteId', (req, res) => {
     const { voteId } = req.params;
     
@@ -313,5 +313,5 @@ app.get('/', (req, res) => {
 // 初始化并启动服务器
 initializeDataFiles();
 app.listen(PORT, () => {
-    console.log(`服务器运行在 http://localhost:${PORT}`);
+    console.log(`服务器运行在 http://0.0.0.0:${PORT}`);
 });

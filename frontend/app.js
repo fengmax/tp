@@ -4,7 +4,8 @@ let activeVotes = [];
 let voteResults = {};
 
 // API基础URL
-const API_BASE = 'http://localhost:3001/api';
+const API_BASE = '/api';
+    
 
 // 初始化
 document.addEventListener('DOMContentLoaded', function() {
@@ -102,8 +103,7 @@ function logoutPlayer() {
     document.getElementById('playerStatus').classList.add('hidden');
     document.getElementById('votingArea').classList.add('hidden');
     document.getElementById('resultsArea').classList.add('hidden');
-    document.getElementById('playerAccount').value = '';
-    document.getElementById('playerPassword').value = '123456';
+   
 }
 
 // 管理员登录

@@ -1,1 +1,191 @@
-
+[
+  {
+    "name": "冰与火的赞歌",
+    "level": 165,
+    "relevel": 15,
+    "power": 2475,
+    "job": "法师",
+    "account": "w001",
+    "password": "123456"
+  },
+  {
+    "name": "翔宇",
+    "level": 141,
+    "relevel": 9,
+    "power": 1269,
+    "job": "战士",
+    "account": "2014",
+    "password": "123456"
+  },
+  {
+    "name": "孤独的贱客",
+    "level": 124,
+    "relevel": 8,
+    "power": 992,
+    "job": "法师",
+    "account": "a1984555",
+    "password": "123456"
+  },
+  {
+    "name": "常山造纸农",
+    "level": 107,
+    "relevel": 6,
+    "power": 642,
+    "job": "道士",
+    "account": "5427486",
+    "password": "123456"
+  },
+  {
+    "name": "牛子",
+    "level": 101,
+    "relevel": 5,
+    "power": 505,
+    "job": "法师",
+    "account": "t144",
+    "password": "123456"
+  },
+  {
+    "name": "风麒麟",
+    "level": 92,
+    "relevel": 3,
+    "power": 276,
+    "job": "法师",
+    "account": "67361",
+    "password": "123456"
+  },
+  {
+    "name": "恨恨恨",
+    "level": 108,
+    "relevel": 2,
+    "power": 216,
+    "job": "法师",
+    "account": "1984555",
+    "password": "123456"
+  },
+  {
+    "name": "火麒麟",
+    "level": 84,
+    "relevel": 1,
+    "power": 84,
+    "job": "法师",
+    "account": "6736",
+    "password": "123456"
+  },
+  {
+    "name": "一袋米",
+    "level": 10,
+    "relevel": 0,
+    "power": 0,
+    "job": "战士",
+    "account": "123123q",
+    "password": "123456"
+  },
+  {
+    "name": "勇敢的心",
+    "level": 41,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "dddd",
+    "password": "123456"
+  },
+  {
+    "name": "百岁山",
+    "level": 43,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "chunai",
+    "password": "123456"
+  },
+  {
+    "name": "多多多",
+    "level": 63,
+    "relevel": 0,
+    "power": 0,
+    "job": "道士",
+    "account": "chunai1",
+    "password": "123456"
+  },
+  {
+    "name": "波多野结衣",
+    "level": 76,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "chunai",
+    "password": "123456"
+  },
+  {
+    "name": "传奇俱乐部",
+    "level": 64,
+    "relevel": 0,
+    "power": 0,
+    "job": "战士",
+    "account": "dddd",
+    "password": "123456"
+  },
+  {
+    "name": "雷麒麟",
+    "level": 42,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "6736",
+    "password": "123456"
+  },
+  {
+    "name": "雷麒麟1",
+    "level": 35,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "6736",
+    "password": "123456"
+  },
+  {
+    "name": "醉里挑灯看剑",
+    "level": 75,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "1999",
+    "password": "123456"
+  },
+  {
+    "name": "哒啦嗨",
+    "level": 67,
+    "relevel": 0,
+    "power": 0,
+    "job": "法师",
+    "account": "123000",
+    "password": "123456"
+  },
+  {
+    "name": "幸运星",
+    "level": 58,
+    "relevel": 0,
+    "power": 0,
+    "job": "道士",
+    "account": "w001",
+    "password": "123456"
+  },
+  {
+    "name": "火炎焱燚",
+    "level": 58,
+    "relevel": 0,
+    "power": 0,
+    "job": "战士",
+    "account": "12300",
+    "password": "123456"
+  },
+  {
+    "name": "笑嘻嘻",
+    "level": 56,
+    "relevel": 0,
+    "power": 0,
+    "job": "战士",
+    "account": "018327",
+    "password": "123456"
+  }
+]
